@@ -25,7 +25,7 @@
 
     loading = true;
     try {
-      const response = await axios.post('/api/download', { url, format });
+      const response = await axios.post('https://api.youtomp3.me/api/download', { url, format });
       window.location.href = response.data.download_url;
     } catch (err) {
       error = err.response?.data?.message || 'Conversion failed, please try again later';
